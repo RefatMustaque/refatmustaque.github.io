@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -6,12 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
 
 <div class="container">
-  <h2>Dynamic Tabs with jQuery</h2>
-  <p>Click on the Tabs to display the active and previous tab.</p>
+  <h2>Dynamic Tabs</h2>
   <ul class="nav nav-tabs">
     <li class="active"><a href="#home">Home</a></li>
     <li><a href="#menu1">Menu 1</a></li>
@@ -25,8 +26,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Menu 2</h3>
@@ -37,24 +37,21 @@
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
-    <hr>
-    <p class="act"><b>Active Tab</b>: <span></span></p>
-    <p class="prev"><b>Previous Tab</b>: <span></span></p>
 </div>
 
 <script>
 $(document).ready(function(){
   $(".nav-tabs a").click(function(){
     $(this).tab('show');
+	   
   });
-  $('.nav-tabs a').on('shown.bs.tab', function(event){
-    var x = $(event.target).text();         // active tab
-    var y = $(event.relatedTarget).text();  // previous tab
-    $(".act span").text(x);
-    $(".prev span").text(y);
+$('#menu1').load("menu1.html" , function(responseTxt, statusTxt, xhr){
+    if(statusTxt == "success")
+      alert("External content loaded successfully!");
+    if(statusTxt == "error")
+      alert("Error: " + xhr.status + ": " + xhr.statusText);
   });
 });
 </script>
-
 </body>
 </html>
