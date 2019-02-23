@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Refat Bin Mustaque</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
@@ -12,30 +12,24 @@
 
 <body>
   <div class="container">
+    <!-- heaing -->
     <h2>Refat Bin Mustaque</h2>
+
+    <!-- navbar -->
     <ul class="nav nav-tabs">
       <li class="active"><a href="#home">Home</a></li>
       <li><a href="#project">Project</a></li>
     </ul>
 
+
+    <!-- tab content -->
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active"></div>
       <div id="project" class="tab-pane fade"></div>
     </div>
   </div>
 
-  <script>
-    $(document).ready(function () {
-      $(".nav-tabs a").click(function () {
-        $(this).tab("show");
-      });
-
-      // navigation content
-      $("#home").load("Content/home.html");
-
-      $("#project").load("Content/project.html");
-    });
-  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
