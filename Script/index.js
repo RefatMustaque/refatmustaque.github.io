@@ -3,6 +3,8 @@ $(document).ready(function () {
         $(this).tab("show");
     });
 
+
+
     // navigation content
     $("#home").load("Content/home.html");
 
