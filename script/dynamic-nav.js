@@ -1,10 +1,8 @@
-$(document).ready(function () {
 
-
-
-    // navigation content
-
-});
+function fixSourceUrl()
+{
+    console.log(window.location.hostname);
+}
 
 function loadTopBar(){
     $("#global-top-navbar").load("nav.html");
