@@ -5,7 +5,7 @@ function fixSourceUrl()
 }
 
 function loadTopBar(){
-    $("#global-top-navbar").load("nav.html");
+    $("#global-top-navbar").load("/nav.html");
 };
 
 function loadSideBar(folderName){
