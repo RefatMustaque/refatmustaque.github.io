@@ -25,7 +25,6 @@ a {
 a:hover {
   color: #173b6c;
   text-decoration: none;
-  font-weight: bolder;
 }
 
 h1,
@@ -61,7 +60,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #2eafec;
+  background: #008073;
   color: #fff;
 }
 
