@@ -1,0 +1,12 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
